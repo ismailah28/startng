@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node - First Task</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        background-color: aliceblue;
+      }
+      .form-control {
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+        margin-top: 40px;
+      }
+
+      input[type="submit"] {
+        background-color: blue;
+        border: none;
+        margin-top: 10px;
+        padding: 5px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/message" method="POST">
+      <div class="form-control">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="4" required></textarea>
+        <input type="submit" value="Save Message" />
+      </div>
+    </form>
+  </body>
+</html>
