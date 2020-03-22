@@ -11,21 +11,29 @@
       body {
         display: flex;
         justify-content: center;
-        background-color: aliceblue;
       }
       .form-control {
         display: flex;
         flex-direction: column;
         width: 50vw;
+        max-width: 340px;
         margin-top: 40px;
       }
 
       input[type="submit"] {
-        background-color: blue;
-        border: none;
+        background-color: transparent;
+        border: 1px solid blue;
         margin-top: 10px;
         padding: 5px;
+        color: blue;
+      }
+
+      input[type="submit"]:hover {
+        background-color: blue;
         color: white;
+      }
+      label {
+        margin-bottom: 5px;
       }
     </style>
   </head>
@@ -33,7 +41,13 @@
     <form action="/message" method="POST">
       <div class="form-control">
         <label for="message">Message</label>
-        <textarea name="message" id="message" rows="4" required></textarea>
+        <textarea
+          name="message"
+          id="message"
+          rows="4"
+          placeholder="Enter message"
+          required
+        ></textarea>
         <input type="submit" value="Save Message" />
       </div>
     </form>
